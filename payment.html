@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Vinix WebSpire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html">
+                    <img src="img/logo vinix.png" alt="Vinix Webspire" class="logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#pricing">Paket Harga</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Detail Pemesanan & Pembayaran</h2>
+            
+            <div id="orderSummary" class="order-summary">
+                <!-- Order summary will be populated by JavaScript -->
+            </div>
+
+            <div class="payment-info">
+                <h4><i class="fas fa-university"></i> Informasi Rekening Pembayaran</h4>
+                
+                <div class="bank-account">
+                    <strong>Bank BCA</strong><br>
+                    No. Rekening: 1234 5678 9012<br>
+                    Atas Nama: PT. Vinix WebSpire Indonesia
+                </div>
+                
+                <div class="bank-account">
+                    <strong>Bank Mandiri</strong><br>
+                    No. Rekening: 9876 5432 1098<br>
+                    Atas Nama: PT. Vinix WebSpire Indonesia
+                </div>
+                
+                <div class="bank-account">
+                    <strong>Bank BNI</strong><br>
+                    No. Rekening: 5678 9012 3456<br>
+                    Atas Nama: PT. Vinix WebSpire Indonesia
+                </div>
+                
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                    <i class="fas fa-info-circle"></i> 
+                    Setelah melakukan pembayaran, harap konfirmasi dengan mengupload bukti transfer pada form di bawah.
+                </p>
+            </div>
+
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label>Upload Bukti Pembayaran *</label>
+                    <div class="file-upload" id="fileUpload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Klik untuk upload bukti transfer</p>
+                        <p class="file-name" id="fileName">Belum ada file yang dipilih</p>
+                        <input type="file" id="paymentProof" class="file-input" accept="image/*,.pdf">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Catatan (Opsional)</label>
+                    <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Tambahkan catatan jika diperlukan..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-full">Konfirmasi Pembayaran</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="payment.js"></script>
+</body>
+</html>
